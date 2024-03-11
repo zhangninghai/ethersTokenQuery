@@ -10,7 +10,7 @@ const contract = new ethers.Contract(tokenAddress, tokenAbi, provider);
 // 特定地址
 const addressA = '0xBC83F2711D0749D7454e4A9D53d8594DF0377c05';
 
-async function getPastApprovals() {
+export async function getPastApprovals() {
     const filter = contract.filters.Approval(null, addressA);
     const events = await contract.queryFilter(filter, 19215503, 19330912);//16299522-19103806
     events.forEach( event => {
@@ -18,5 +18,3 @@ async function getPastApprovals() {
         console.log(`所有者: ${event.args.owner}, 被授权者: ${event.args.spender}, 数额: ${event.args.value}`);
     });
 }
-
-getPastApprovals();
