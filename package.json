@@ -12,9 +12,11 @@
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
     "dotenv": "^16.4.5",
-    "ethers": "^6.11.1"
-  },"repository": {
+    "ethers": "^6.11.1",
+    "etherstokenquery": "^1.0.0"
+  },
+  "repository": {
     "type": "git",
-      "url": "https://github.com/zhangninghai/ethersTokenQuery.git"
+    "url": "https://github.com/zhangninghai/ethersTokenQuery.git"
   }
 }
